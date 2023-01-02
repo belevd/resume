@@ -14,6 +14,7 @@
 
   const onLanguageChange = (value) => {
     language.set(value.value);
+    localStorage.setItem('lang', value.value);
   };
 </script>
 
@@ -23,6 +24,14 @@
 
 
 <style>
+    .header {
+      position: sticky;
+      top: 0;
+      margin-left: auto;
+      display: flex;
+      width: fit-content;
+    }
+
     .header > :global(.header__select) {
       width: 4.5em;
     }

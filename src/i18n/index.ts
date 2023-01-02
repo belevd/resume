@@ -7,7 +7,7 @@ let translations = {
   en
 };
 
-export const language = writable('en');
+export const language = writable(localStorage.getItem('lang') || 'en');
 
 function translate(locale: string, key: string, vars: { [key: string]: any }) {
   if (!key) throw new Error("no key provided to $t()");
