@@ -101,6 +101,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     --base-weak: #213547;
+    --base-medium: #bbb;
     --base-strong: #ffffff;
   }
   a:hover {

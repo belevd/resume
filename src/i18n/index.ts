@@ -9,6 +9,10 @@ let translations = {
 
 export const language = writable(localStorage.getItem('lang') || 'en');
 
+language.subscribe(value => {
+  document.documentElement.lang = value;
+});
+
 function translate(locale: string, key: string, vars: { [key: string]: any }) {
   if (!key) throw new Error("no key provided to $t()");
   if (!locale) throw new Error(`no translation for key "${key}"`);
