@@ -11,6 +11,12 @@ export const language = writable(localStorage.getItem('lang') || 'en');
 
 language.subscribe(value => {
   document.documentElement.lang = value;
+  if (value === 'en') {
+    document.title = 'Evgenii Belolipetskii'
+  }
+  if (value === 'ru') {
+    document.title = 'Евгений Белолипецкий'
+  }
 });
 
 function translate(locale: string, key: string, vars: { [key: string]: any }) {
