@@ -92,6 +92,7 @@
     background: var(--base-strong);
     border-radius: 16px;
     overflow: hidden;
+    z-index: 10;
   }
 
   .select__option {

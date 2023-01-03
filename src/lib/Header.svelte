@@ -30,6 +30,8 @@
       margin-left: auto;
       display: flex;
       width: fit-content;
+      padding-top: 2em;
+      z-index: 1;
     }
 
     .header > :global(.header__select) {

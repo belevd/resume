@@ -10,6 +10,7 @@
 
 <style>
   .intro {
+    margin-top: 0;
     white-space: pre-line;
     animation: show 1s ease-in-out;
   }

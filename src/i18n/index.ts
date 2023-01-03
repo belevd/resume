@@ -2,7 +2,7 @@ import ru from './ru';
 import en from './en';
 import {derived, writable} from "svelte/store";
 
-let translations = {
+export const translations = {
   ru,
   en
 };
