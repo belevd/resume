@@ -30,7 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
-    width: 50%;
+    width: 100%;
   }
 
   .list__item {
