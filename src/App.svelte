@@ -4,6 +4,7 @@
   import Projects from "./lib/Projects.svelte";
   import {onMount} from "svelte";
   import RevealContainer from "./lib/ui/RevealContainer.svelte";
+  import Summary from "./lib/Summary.svelte";
 
   onMount(() => {
     function reveal() {
