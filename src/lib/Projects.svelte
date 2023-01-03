@@ -69,7 +69,7 @@
   }
 
   .project {
-    width: 45%;
+    width: calc(50% - 2em);
     padding: 2em;
     border: 1px solid var(--base-medium);
     border-radius: 3em;
@@ -87,5 +87,15 @@
     padding: 0.25em 0.5em;
     border: 1px solid var(--base-medium);
     border-radius: 1em;
+  }
+  
+  @media (max-width: 1024px) {
+    .projects {
+      gap: 2em;
+    }
+
+    .project {
+      width: 100%;
+    }
   }
 </style>
