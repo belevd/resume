@@ -49,8 +49,8 @@ export const PROJECTS = [
     tasks_en: 'Support, revision, development of new functions, refactoring of old code, updating the build to the latest versions of libraries (there was a very old legacy).',
     tasks_ru: 'Поддержка, доработка, разработка новых функций, рефакторинг старого кода, обновление сборки до актуальных версий библиотек (было очень старое легаси).',
     duration: {
-      from: '2020-10-1',
-      to: '2021-05-1',
+      from: '2020-10-01',
+      to: '2021-05-01',
     },
   }, {
     name: 'AntiAge Expert Clinic',
@@ -80,7 +80,7 @@ export const PROJECTS = [
     tasks_en: 'Starting a project from scratch, building an architecture, managing processes, integrating new developers, developing new functions.',
     tasks_ru: 'Запуск проекта с нуля, построение архитектуры, управление процессами, интеграция новых разработчиков, разработка новых функций.',
     duration: {
-      from: '2021-05-1',
+      from: '2021-05-01',
       to: new Date().toDateString(),
     },
   }, {
