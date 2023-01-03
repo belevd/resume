@@ -3,8 +3,8 @@
   import {language} from "../i18n/index.ts";
 
   const options = [
+    {label: 'EN', value: 'en'},
     {label: 'RU', value: 'ru'},
-    {label: 'EN', value: 'en'}
   ];
 
   let selectedLang = {value: $language, label: $language.toUpperCase()}
