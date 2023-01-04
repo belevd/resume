@@ -25,8 +25,9 @@
 
 <style>
     .header {
-      position: sticky;
+      position: fixed;
       top: 0;
+      right: 1em;
       margin-left: auto;
       display: flex;
       width: fit-content;
