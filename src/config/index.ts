@@ -116,6 +116,25 @@ export const PROJECTS = [
       from: '2022-03-01',
       to: '2022-06-01',
     }
+  }, {
+    name: 'Punk City',
+    stack: [
+      {
+        title: 'TypeScript',
+      }, {
+        title: 'React 18',
+      }, {
+        title: 'Classnames',
+      }
+    ],
+    description_en: 'Telegram is a game in which there are fights between users, trading items, getting them from loot boxes.',
+    description_ru: 'Телеграм игра, в которой происходят бои между пользователями, торговля предметами, получение их из лутбоксов.',
+    tasks_en: 'Development of multiple interfaces with animations. The main goal: to make the build lightweight and adaptive layout for any screen size.',
+    tasks_ru: 'Разработка нескольких интерфейсов с анимациями. Основная цель: сделать билд легковесным и адаптивную верстку под любой размер экрана.',
+    duration: {
+      from: '2022-12-25',
+      to: new Date().toDateString(),
+    }
   }
 ]
 
