@@ -1,3 +1,5 @@
+import Github from "../assets/Github.svelte";
+
 export const STACK = [
   {
     title: 'React',
@@ -114,5 +116,13 @@ export const PROJECTS = [
       from: '2022-03-01',
       to: '2022-06-01',
     }
+  }
+]
+
+export const SOCIALS = [
+  {
+    name: 'github',
+    link: 'https://github.com/belevd',
+    icon: Github,
   }
 ]

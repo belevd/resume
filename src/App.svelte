@@ -5,6 +5,7 @@
   import {onMount} from "svelte";
   import RevealContainer from "./lib/ui/RevealContainer.svelte";
   import Summary from "./lib/Summary.svelte";
+  import Socials from "./lib/Socials.svelte";
 
   onMount(() => {
     function reveal() {
@@ -27,6 +28,7 @@
 
 <main>
     <Header />
+    <Socials />
     <RevealContainer active={true}>
         <AboutMe />
     </RevealContainer>
