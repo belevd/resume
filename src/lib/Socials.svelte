@@ -5,7 +5,7 @@
 <aside class="socials">
     {#each SOCIALS as social}
         <a class="social__link" href={social.link} target="_blank" rel="noreferrer">
-            <svelte:component width={50} height={50} class="social__icon" this={social.icon} />
+            <svelte:component class="social__icon" this={social.icon} />
         </a>
     {/each}
 </aside>
@@ -21,10 +21,26 @@
 
     .social__link {
       color: var(--base-weak);
-      max-width: 1em;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .social__link:last-child {
+      margin-bottom: 0;
     }
 
     .social__link:hover {
       color: var(--base-medium);
+    }
+
+    :global(.social__icon) {
+      width: 3em;
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      :global(.social__icon) {
+        width: 2em;
+      }
     }
 </style>
