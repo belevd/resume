@@ -1,10 +1,14 @@
 <script>
   import {SOCIALS} from "../config/index.ts";
+
+  const onHover = (event) => {
+    // console.log(event.currentTarget.href);
+  }
 </script>
 
 <aside class="socials">
     {#each SOCIALS as social}
-        <a class="social__link" href={social.link} target="_blank" rel="noreferrer">
+        <a on:mouseover={onHover} class="social__link" href={social.link} target="_blank" rel="noreferrer">
             <svelte:component class="social__icon" this={social.icon} />
         </a>
     {/each}

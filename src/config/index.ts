@@ -134,6 +134,28 @@ export const PROJECTS = [
     tasks_ru: 'Разработка нескольких интерфейсов с анимациями. Основная цель: сделать билд легковесным и адаптивную верстку под любой размер экрана.',
     duration: {
       from: '2022-12-25',
+      to: '2022-02-09',
+    }
+  },
+  {
+    name: 'FlyCode Scrum Bot',
+    stack: [
+      {
+        title: 'Python',
+      }, {
+        title: 'Aiogram',
+      }, {
+        title: 'Docker',
+      }, {
+        title: 'Gitlab CI',
+      }
+    ],
+    description_en: 'Telegram bot helper for SCRUM-master and team',
+    description_ru: 'Телеграм бот для помощи SCRUM-мастеру и командам',
+    tasks_en: 'Developing a project from scratch, collecting requirements, market research, developing a bot. Deployment, CI/CD, hosting.',
+    tasks_ru: 'Разработка проекта с нуля, сбор требований, изучение рынка, разработка бота. Deploy, CI/CD, hosting.',
+    duration: {
+      from: '2022-10-21',
       to: new Date().toDateString(),
     }
   }
