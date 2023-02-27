@@ -17,7 +17,11 @@
   function getDuration (duration) {
     const dur = Date.parse(duration.to) - Date.parse(duration.from);
     const years = new Date(dur).getFullYear() - 1970;
-    const months = new Date(dur).getMonth();
+    let months = new Date(dur).getMonth();
+    const days = new Date(dur).getDate();
+    if (days > 15) {
+      months += 1;
+    }
     let result = `${months} ${$pluralize(months, 'months')}`;
     if (years) {
       result = `${years} ${$pluralize(years, 'years')} ` + result;
@@ -35,7 +39,7 @@
 </script>
 
 <section>
-    <h2>{`${$t('projects.title')}:`}</h2>
+    <h2 id="projects">{`${$t('projects.title')}:`}</h2>
     <div class="projects">
         {#each PROJECTS as project}
             <div class="project">

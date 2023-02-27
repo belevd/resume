@@ -7,50 +7,37 @@
 
 <section class="aboutMe">
     <div class="aboutMe__intro">
+        <img class="aboutMe__photo" src='photo.jpg' alt="Evgenii Belolipetskii"/>
         <Intro/>
     </div>
-    <div class="aboutMe__description">
-        <Summary/>
-        <Stack list={STACK}/>
-    </div>
-    <img class="aboutMe__photo" src='photo.jpg' alt="Evgenii Belolipetskii"/>
+    <Summary/>
+    <Stack list={STACK}/>
 </section>
 
 <style>
   .aboutMe {
     width: 100%;
-    display: grid;
-    grid-template-columns: 60% calc(40% - 5em);
-    gap: 0 5em;
     animation: show 1s ease-in-out;
   }
 
   .aboutMe__intro {
-    grid-column: 1 / 3;
-    order: 0;
-  }
-
-  .aboutMe__description {
-    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
   }
 
   .aboutMe__photo {
-    width: 90%;
+    width: 10rem;
     justify-self: center;
-    align-self: center;
-    order: 3;
+    align-self: flex-start;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
 
-  @media (max-width: 1024px) {
-    .aboutMe {
-      display: flex;
+  @media screen and (max-width: 1024px) {
+    .aboutMe__intro {
       flex-direction: column;
-    }
-
-    .aboutMe__photo {
-      order: 1;
-      width: 300px;
-      align-self: flex-start;
     }
   }
 </style>

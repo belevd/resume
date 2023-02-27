@@ -1,11 +1,9 @@
 <script lang="ts">
-  import Header from "./lib/Header.svelte";
+  import Header from "./app/ui/Header.svelte";
   import AboutMe from "./lib/AboutMe.svelte";
   import Projects from "./lib/Projects.svelte";
   import {onMount} from "svelte";
-  import RevealContainer from "./lib/ui/RevealContainer.svelte";
-  import Summary from "./lib/Summary.svelte";
-  import Socials from "./lib/Socials.svelte";
+  import RevealContainer from "./shared/ui/RevealContainer.svelte";
 
   onMount(() => {
     function reveal() {
@@ -28,14 +26,18 @@
 
 <main>
     <Header />
-    <Socials />
-    <RevealContainer active={true}>
-        <AboutMe />
-    </RevealContainer>
-    <RevealContainer>
-        <Projects />
-    </RevealContainer>
+    <div class="app">
+        <RevealContainer active={true}>
+            <AboutMe />
+        </RevealContainer>
+        <RevealContainer>
+            <Projects />
+        </RevealContainer>
+    </div>
 </main>
 
 <style>
+    .app {
+      padding: 2rem;
+    }
 </style>

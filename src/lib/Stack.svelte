@@ -7,7 +7,7 @@
 </script>
 
 <div>
-    <h2 class="list__title">{`${$t('stack.title')}:`}</h2>
+    <h2 id="stack" class="list__title">{`${$t('stack.title')}:`}</h2>
     <ul class="list">
         {#each list as item, index (item)}
             <li transition:fade class="list__item">

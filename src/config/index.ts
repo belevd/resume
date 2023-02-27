@@ -1,6 +1,3 @@
-import Github from "../assets/Github.svelte";
-import Telegram from "../assets/Telegram.svelte";
-
 export const STACK = [
   {
     title: 'React',
@@ -134,7 +131,7 @@ export const PROJECTS = [
     tasks_ru: 'Разработка нескольких интерфейсов с анимациями. Основная цель: сделать билд легковесным и адаптивную верстку под любой размер экрана.',
     duration: {
       from: '2022-12-25',
-      to: '2022-02-09',
+      to: '2023-02-09',
     }
   },
   {
@@ -158,17 +155,5 @@ export const PROJECTS = [
       from: '2022-10-21',
       to: new Date().toDateString(),
     }
-  }
-]
-
-export const SOCIALS = [
-  {
-    name: 'github',
-    link: 'https://github.com/belevd',
-    icon: Github,
-  }, {
-    name: 'telegram',
-    link: 'https://t.me/belevd',
-    icon: Telegram,
   }
 ]
