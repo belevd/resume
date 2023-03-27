@@ -7,6 +7,9 @@ const Titles = TITLES.reduce((object, title, index) => {
 
 export const activeTitle = writable(Titles)
 
-function changeTitle(title) {
-  activeTitle.set(title)
+export function changeTitle(title) {
+  activeTitle.set({
+    ...Titles,
+    [title]: {...Titles[title], active: true}
+  })
 }

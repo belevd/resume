@@ -2,6 +2,7 @@
   import Select from "../../shared/ui/Select.svelte";
   import {language, t} from "../../i18n/index.ts";
   import SocialsList from "../../entities/Social/ui/SocialsList.svelte";
+  import {activeTitle} from "../lib";
 
   const options = [
     {label: 'EN', value: 'en'},
@@ -21,9 +22,9 @@
 
 <header class="header">
     <nav>
-        <a href="#intro">{$t('intro')}</a>
-        <a href="#stack">{$t('stack')}</a>
-        <a href="#projects">{$t('projects')}</a>
+        <a class:tab_active={$activeTitle.intro.active} href="#intro">{$t('intro')}</a>
+        <a class:tab_active={$activeTitle.stack.active}  href="#stack">{$t('stack')}</a>
+        <a class:tab_active={$activeTitle.projects.active}  href="#projects">{$t('projects')}</a>
     </nav>
     <SocialsList />
     <Select class="header__select" options={options} onChange={onLanguageChange} value={selectedLang}/>
@@ -56,6 +57,10 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
+    }
+
+    :global(.tab_active) {
+      color: var(--accent-strong);
     }
 
     @media screen and (max-width: 1024px) {

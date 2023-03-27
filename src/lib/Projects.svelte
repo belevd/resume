@@ -1,7 +1,8 @@
 <script>
   import {PROJECTS} from "../config/index.ts";
   import {t, language} from '../i18n/index.ts';
-  import {pluralize} from "../shared/lib/index.ts";
+  import {pluralize, viewport} from "../shared/lib/index.ts";
+  import { changeTitle } from "../app/lib";
   import {derived} from "svelte/store";
 
   let lang;
@@ -39,7 +40,7 @@
 </script>
 
 <section>
-    <h2 id="projects">{`${$t('projects.title')}:`}</h2>
+    <h2 use:viewport on:enterViewport={() => changeTitle('projects')} id="projects">{`${$t('projects.title')}:`}</h2>
     <div class="projects">
         {#each PROJECTS as project}
             <div class="project">

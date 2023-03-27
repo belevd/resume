@@ -1,5 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
+  import { viewport } from '../shared/lib';
+  import { changeTitle } from "../app/lib";
 
   export let list = [];
 
@@ -7,7 +9,7 @@
 </script>
 
 <div>
-    <h2 id="stack" class="list__title">{`${$t('stack.title')}:`}</h2>
+    <h2 use:viewport on:enterViewport={() => changeTitle('stack')} id="stack" class="list__title">{`${$t('stack.title')}:`}</h2>
     <ul class="list">
         {#each list as item, index (item)}
             <li transition:fade class="list__item">

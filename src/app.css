@@ -2,6 +2,7 @@
   --base-weak: rgba(255, 255, 255, 0.87);
   --base-medium: #666;
   --base-strong: #242424;
+  --accent-strong: #747bff;
 
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -114,9 +115,10 @@ button:focus-visible {
     --base-weak: #213547;
     --base-medium: #bbb;
     --base-strong: #ffffff;
+    --accent-strong: #747bff;
   }
   a:hover {
-    color: #747bff;
+    color: var(--accent-strong);
   }
   button {
     background-color: #f9f9f9;
