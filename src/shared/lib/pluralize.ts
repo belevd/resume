@@ -1,4 +1,4 @@
-import {language, t, translations} from "../i18n";
+import {language, t, translations} from "../../i18n";
 import {derived} from "svelte/store";
 
 function plur(lang, number, key) {
@@ -20,7 +20,9 @@ function plur(lang, number, key) {
   }
 }
 
-export const pluralize = derived(
+const pluralize = derived(
   language,
   ($language) => (number: number, key: string) => plur($language, number, key),
 )
+
+export default pluralize

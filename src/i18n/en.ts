@@ -5,6 +5,7 @@ export default {
   'months': 'months',
   'years': 'years',
 
+  'intro': 'Resume',
   'intro.hello': 'Hello',
   'intro.name': 'my name is Evgenii Belolipetskii',
   'intro.developer': "I'm a frontend developer",
@@ -20,8 +21,10 @@ export default {
     '\n' +
     'Interested in technologies, gadgets, cars, and media.',
 
+  'stack': 'Stack',
   'stack.title': 'My current stack is',
 
+  'projects': 'Projects',
   'projects.title': 'Projects I have participated in',
   'projects.stack': 'Stack',
   'projects.description': 'About project',

@@ -1,7 +1,8 @@
 <script>
   import {PROJECTS} from "../config/index.ts";
   import {t, language} from '../i18n/index.ts';
-  import {pluralize} from "../utils/index.ts";
+  import {pluralize, viewport} from "../shared/lib/index.ts";
+  import { changeTitle } from "../app/lib";
   import {derived} from "svelte/store";
 
   let lang;
@@ -17,7 +18,11 @@
   function getDuration (duration) {
     const dur = Date.parse(duration.to) - Date.parse(duration.from);
     const years = new Date(dur).getFullYear() - 1970;
-    const months = new Date(dur).getMonth();
+    let months = new Date(dur).getMonth();
+    const days = new Date(dur).getDate();
+    if (days > 15) {
+      months += 1;
+    }
     let result = `${months} ${$pluralize(months, 'months')}`;
     if (years) {
       result = `${years} ${$pluralize(years, 'years')} ` + result;
@@ -35,7 +40,7 @@
 </script>
 
 <section>
-    <h2>{`${$t('projects.title')}:`}</h2>
+    <h2 use:viewport on:enterViewport={() => changeTitle('projects')} id="projects">{`${$t('projects.title')}:`}</h2>
     <div class="projects">
         {#each PROJECTS as project}
             <div class="project">

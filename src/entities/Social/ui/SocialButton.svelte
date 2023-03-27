@@ -15,7 +15,6 @@
   .social__link {
     position: relative;
     color: var(--base-weak);
-    margin-bottom: 1rem;
     display: block;
   }
 
@@ -28,7 +27,7 @@
   }
 
   :global(.social__icon) {
-    width: 3em;
+    width: 2rem;
     display: block;
   }
 
