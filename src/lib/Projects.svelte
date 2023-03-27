@@ -1,7 +1,7 @@
 <script>
   import {PROJECTS} from "../config/index.ts";
   import {t, language} from '../i18n/index.ts';
-  import {pluralize} from "../utils/index.ts";
+  import {pluralize} from "../shared/lib/index.ts";
   import {derived} from "svelte/store";
 
   let lang;
