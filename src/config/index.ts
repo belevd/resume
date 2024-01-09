@@ -2,15 +2,17 @@ export const STACK = [
   {
     title: 'React',
   }, {
+    title: 'NextJS',
+  }, {
     title: 'Redux',
+  }, {
+    title: 'MobX',
   }, {
     title: 'TypeScript'
   }, {
     title: 'CSS'
   }, {
     title: 'Tailwind CSS'
-  }, {
-    title: 'Svelte'
   }, {
     title: 'NodeJS',
   }, {
@@ -81,7 +83,7 @@ export const PROJECTS = [
     tasks_ru: 'Запуск проекта с нуля, построение архитектуры, управление процессами, интеграция новых разработчиков, разработка новых функций.',
     duration: {
       from: '2021-05-01',
-      to: new Date().toDateString(),
+      to: '2023-06-01',
     },
   }, {
     name: 'FlyCode HRM',
@@ -131,7 +133,7 @@ export const PROJECTS = [
     tasks_ru: 'Разработка нескольких интерфейсов с анимациями. Основная цель: сделать билд легковесным и адаптивную верстку под любой размер экрана.',
     duration: {
       from: '2022-12-25',
-      to: '2023-02-09',
+      to: new Date().toDateString(),
     }
   },
   {
@@ -153,6 +155,48 @@ export const PROJECTS = [
     tasks_ru: 'Разработка проекта с нуля, сбор требований, изучение рынка, разработка бота. Deploy, CI/CD, hosting.',
     duration: {
       from: '2022-10-21',
+      to: '2023-06-01',
+    }
+  },
+  {
+    name: 'Yandex Robolavka',
+    stack: [
+      {
+        title: 'NextJS',
+      }, {
+        title: 'TypeScript',
+      }, {
+        title: 'MobX-state-tree',
+      }, {
+        title: 'RXJS',
+      }
+    ],
+    description_en: 'Interfaces for remote control of the robot and monitoring the state of the warehouse and processes taking place on it',
+    description_ru: 'Интерфейсы для телеуправления роботом и мониторинг состояния склада и процессов происходящих на нем',
+    tasks_en: 'Development of adaptive interfaces adapted for mobile tablets. Robot operation protocols, interaction with the backend, display of the robot\'s state in the interface.',
+    tasks_ru: 'Разработка адаптивных интерфейсов, адаптированных под мобильные планшеты. Протоколы работы с роботом, взаимодействие с бекендом, отображение состояния робота в интерфейсе.',
+    duration: {
+      from: '2023-06-01',
+      to: '2023-12-01',
+    }
+  },
+  {
+    name: 'Yandex Robotics',
+    stack: [
+      {
+        title: 'NextJS',
+      }, {
+        title: 'TypeScript',
+      }, {
+        title: 'Redux Saga',
+      }
+    ],
+    description_ru: 'Интерфейсы для отслеживания состояния роботов, управление их конфигурацией, обновление прошивок, отображение данных, собранных роботами',
+    description_en: 'Interfaces for tracking the status of robots, managing their configuration, updating firmware, displaying data collected by robots',
+    tasks_ru: 'Разработка стандартизированных интрефейсов, взаимодействие с множеством бекендов через серверную часть приложения, отображение данных, собранных роботами',
+    tasks_en: 'Development of standardized interfaces, interaction with many backends through the server part of the application, display of data collected by robots',
+    duration: {
+      from: '2023-12-01',
       to: new Date().toDateString(),
     }
   }
