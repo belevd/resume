@@ -4,6 +4,12 @@
   import Projects from "./lib/Projects.svelte";
   import {onMount} from "svelte";
   import RevealContainer from "./shared/ui/RevealContainer.svelte";
+  import { injectSpeedInsights } from '@vercel/speed-insights';
+  import { inject } from '@vercel/analytics';
+
+  inject();
+
+  injectSpeedInsights();
 
   onMount(() => {
     function reveal() {
